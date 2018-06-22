@@ -1,0 +1,20 @@
+# Pasta criada pelo IPython Notebook
+.ipynb_checkpoints
+
+# Tex files
+*.synctex.gz
+*.fls
+*.bbl
+*.blg
+*.fff
+*.log
+*.lof
+*.aux
+*.pyc
+*.out
+*~
+*.cache
+*.exe
+
+# Pasta criada pelo pytest
+*.pytest_cache/
