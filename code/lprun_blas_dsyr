@@ -1,0 +1,18 @@
+Timer unit: 1e-06 s
+
+Total time: 0.032427 s
+File: /home/vanderlei/Documents/Calculo_numerico/code/compute_ATA.py
+Function: compute_ATA_blas_dsyr at line 49
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    49                                           def compute_ATA_blas_dsyr(N):
+    50                                               '''
+    51                                               Compute only the lower or upper part of ATA
+    52                                               by using the scipy wrraper for BLAS dsyr.
+    53                                               '''
+    54         1        109.0    109.0      0.3      ATA = np.zeros((N,N))
+    55       301        342.0      1.1      1.1      for i in range(N):
+    56       300      21464.0     71.5     66.2          ai = compute_v(N)
+    57       300      10511.0     35.0     32.4          ATA = bla.dsyr(alpha=1, x=ai, lower=1, n=N, a=ATA, overwrite_a=1)
+    58         1          1.0      1.0      0.0      return ATA

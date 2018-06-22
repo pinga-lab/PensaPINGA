@@ -1,0 +1,20 @@
+Timer unit: 1e-06 s
+
+Total time: 0.091116 s
+File: /home/vanderlei/Documents/Calculo_numerico/code/compute_ATA.py
+Function: compute_ATA_numpy_outer at line 24
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    24                                           def compute_ATA_numpy_outer(N):
+    25                                               '''
+    26                                               Compute ATA by using the numpy.outer.
+    27                                               '''
+    28         1        256.0    256.0      0.3      ATA = np.zeros((N,N))
+    29       301        366.0      1.2      0.4      for i in range(N):
+    30       300      19855.0     66.2     21.8          ai = compute_v(N)
+    31                                                   # I do not understand the difference between
+    32                                                   # np.multiply.outer and np.outer
+    33                                                   # ATA += np.multiply.outer(ai, ai)
+    34       300      70638.0    235.5     77.5          ATA += np.outer(ai, ai)
+    35         1          1.0      1.0      0.0      return ATA
